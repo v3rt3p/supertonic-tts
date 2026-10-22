@@ -5,7 +5,7 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-COPY package.json pnpm-lock.yaml* ./
+COPY package.json pnpm-lock.yaml* pnpm-workspace.yaml ./
 RUN corepack enable && pnpm install --prod=false --frozen-lockfile=false
 
 COPY tsconfig.json ./
