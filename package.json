@@ -1,0 +1,21 @@
+{
+  "name": "supertonic-tts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "OpenAI-compatible HTTP service for Supertonic TTS",
+  "main": "src/main.ts",
+  "scripts": {
+    "start": "tsx src/main.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.3",
+    "express": "^5.1.0",
+    "lru-cache": "^11.1.0",
+    "onnxruntime-node": "^1.23.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "zod": "^4.0.14"
+  }
+}

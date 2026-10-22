@@ -1,0 +1,6 @@
+node_modules/
+assets/
+*.wav
+*.ogg
+*.mp3
+.env
