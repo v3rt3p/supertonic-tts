@@ -60,7 +60,7 @@ async function convert (wav: Buffer, format: string): Promise<Buffer> {
   return await new Promise<Buffer>((resolve, reject) => {
     const child = spawn('ffmpeg', [
       '-nostdin', '-hide_banner', '-loglevel', 'error', '-i', 'pipe:0',
-      '-ac', '1', '-ar', '44100', ...codec, 'pipe:1',
+      '-ac', '1', '-ar', '48000', ...codec, 'pipe:1',
     ])
     const chunks: Buffer[] = []
     const errors: Buffer[] = []
@@ -77,7 +77,7 @@ async function convert (wav: Buffer, format: string): Promise<Buffer> {
 
 function contentType (format: string): string {
   if (format === 'opus') return 'audio/ogg; codecs=opus'
-  if (format === 'pcm') return 'audio/pcm; rate=44100'
+  if (format === 'pcm') return 'audio/pcm; rate=48000'
   return `audio/${format}`
 }
 
