@@ -2,6 +2,8 @@
 
 OpenAI-compatible HTTP service backed by **Supertonic 3**. This service is Russian-only: every request is synthesized with `lang: "ru"` and requests using another language are rejected. The model runs locally through ONNX Runtime; no external TTS API is used.
 
+Docs ([en](https://v3rt3p.github.io/en/services/supertonic-tts.html)/[ru](https://v3rt3p.github.io/ru/services/supertonic-tts.html))
+
 ## Model files
 
 The service expects the Supertonic 3 assets in `ASSETS_PATH` (default `/app/assets`):
